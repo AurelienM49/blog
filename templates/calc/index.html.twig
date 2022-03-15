@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %} 
+
+{% block titre %}
+    Calculatrice
+{% endblock %}
+
+{% block main %}
+    <h1>Calculatrice</h1>
+    <form action="/calculer" method="get">
+        <input type="number" placeholder="Numéro 1" name="n1">
+        <select name="operateur">
+            <option value="+">+</option>
+            <option value="*">*</option>
+            <option value="-">-</option>
+            <option value="/">/</option>
+        </select>
+        <input type="number" placeholder="Numéro 2" name="n2">
+        <button type="submit">Calculer</button>
+    </form>
+    
+        <p>Résultat : {{rs}}</p>
+{% endblock %}
